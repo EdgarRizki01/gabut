@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Love Animation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper" id="love">
+      <div class="saying">
+        <span class="i">I</span>
+        <span class="love">LOVE</span>
+        <i class="fa fa-heart heart" aria-hidden="true"></i>
+        <span class="you">YOU</span>
+        <span class="u">U</span>
+      </div>
+      <div class="pops">
+        <div class="pop first">
+          <div class="circle out-45"></div>
+          <div class="circle out-225"></div>
+          <div class="circle out-315"></div>
+        </div>
+        <div class="pop second">
+          <div class="circle out-45"></div>
+          <div class="circle out-225"></div>
+          <div class="circle out-315"></div>
+        </div>
+        <div class="pop third">
+          <div class="circle out-45"></div>
+          <div class="circle out-225"></div>
+          <div class="circle out-315"></div>
+        </div>
+        <div class="pop fourth">
+          <div class="circle out-45"></div>
+          <div class="circle out-225"></div>
+          <div class="circle out-315"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

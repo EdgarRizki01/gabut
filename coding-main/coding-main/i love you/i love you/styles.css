@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #0197f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  font-size: 1em;
+}
+
+.pops {
+  position: absolute;
+  z-index: -1;
+  height: 20em;
+  width: 80em;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pop {
+  position: absolute;
+  transform: scale(3);
+  opacity: 0;
+}
+
+.pop.first {
+  left: 26em;
+  top: 8em;
+}
+
+.pop.second {
+  left: 50em;
+  top: 8em;
+}
+
+.pop.third {
+  left: 25em;
+  top: 8em;
+}
+
+.pop.fourth {
+  left: 50em;
+  top: 8em;
+}
+
+.saying {
+  margin: auto;
+  padding: 3em;
+  box-sizing: border-box;
+  border-left: 1em solid #fff;
+  border-right: 1em solid #fff;
+  height: 20em;
+  overflow: hidden;
+  display: flex;
+  width: 80em;
+  letter-spacing: 1em;
+  animation: squeeze 6s forwards;
+  transition: width 1s;
+  position: relative;
+}
+
+.saying span {
+  font-size: 15em;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #b9c4ce;
+  display: inline-block;
+}
+
+.saying .love {
+  animation: hide 0.001s 1.08s forwards;
+}
+
+.saying .you {
+  animation: hide 0.001s 2.1s forwards;
+}
+
+.saying .i {
+  animation: hide 0.001s 3s forwards;
+}
+
+.saying .heart {
+  display: inline-block;
+  font-size: 15em;
+  color: #d67380;
+  opacity: 0;
+  width: 0;
+  margin: auto 0.2em;
+  animation: heart 6s forwards;
+}
+
+.saying .u {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  animation: u 6s forwards;
+}
+
+@keyframes hide {
+  to {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0 !important;
+  }
+}
+
+@keyframes u {
+  35%,
+  50.5%,
+  100% {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+  }
+  36%,
+  50% {
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0%,
+  17.5% {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+  }
+
+  18% {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    width: auto;
+  }
+
+  20%,
+  35%,
+  51% {
+    transform: scale(1.5);
+  }
+
+  23%,
+  34%,
+  38%,
+  50%,
+  54% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    width: auto;
+  }
+}
+
+@keyframes squeeze {
+  0% {
+    width: 80em;
+    letter-spacing: 2em;
+  }
+
+  18% {
+    width: 72em;
+    letter-spacing: 1em;
+  }
+
+  19% {
+    width: 65em;
+    letter-spacing: -0.5em;
+  }
+
+  30%,
+  32% {
+    width: 55em;
+    letter-spacing: -1em;
+  }
+
+  40%,
+  46% {
+    width: 39em;
+  }
+
+  55.5%,
+  100% {
+    width: 30em;
+    letter-spacing: -1em;
+  }
+}
+
+.pop {
+  width: 10em;
+  height: 10em;
+  border: 0.2em solid #b9c4ce;
+  border-radius: 50%;
+  animation: pop 0.4s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+  position: relative;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0.25;
+    width: 2em;
+    height: 2em;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0.66;
+    width: 5em;
+    height: 5em;
+    opacity: 0.25;
+  }
+
+  100% {
+    width: 5em;
+    height: 5em;
+    opacity: 0;
+  }
+}
+
+.circle {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #b9c4ce;
+  position: absolute;
+}
+
+@keyframes out-45 {
+  from {
+    right: -2em;
+    top: -2em;
+  }
+
+  to {
+    width: 0.3em;
+    height: 0.3em;
+    opacity: 0;
+    right: -3em;
+    top: -3em;
+  }
+}
